@@ -20,19 +20,21 @@
     </div>
 </header>
 
-<main>
+<main id="container" class="container">
     <div class="row">
         <section class="col-5">
-            <div>
+            <div id="search-area">
                 <h2 class="text-center">Search for a City</h2>
-                <form class="text-center">
-                    <input name="city" type="text" id="city" autofocus="true" class="col-6 mb-4">
-                    <button class="col-6" type="submit">Search</button>
+                <form id="search-bar" class="text-center">
+                    <input name="city" type="text" id="city" autofocus="true" class="input col-6 mb-4">
+                    <button id="search-btn" class="btn col-6" type="submit">Search</button>
                 </form>
+                <br><br>
+                <div id="search-history"></div>
             </div>
         </section>
         <section class="col-7">
-            <p>Section 2</p>
+            <div id="weather-area"></div>
         </section>
     </div>
 </main>
