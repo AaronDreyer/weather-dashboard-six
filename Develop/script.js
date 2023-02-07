@@ -27,6 +27,7 @@ let getWeather = function(city) {
 
             }
         })  
+        
 };
 
 // Function for the any submittion within the html form
@@ -106,4 +107,26 @@ let displayWeather = function(weatherData) {
     // Saves the search history using openweather api's name value
     saveHistoryData(weatherData.name);
 };
+
+// Function to save the city searched in form to local storage
+let saveHistoryData = function (city) {
+
+    // if statement stating that if the the search history below the search bar does not inslude the city searched then it should load beneath if
+    // if the city is already present then no need to add again
+    if(!searchHistory.includes(city)){
+        searchHistory.push(city);
+        $("#search-history").append("<a href='#' id='" + city + "'>" + city + "</a>")
+    } 
+
+    // Saves searchHistory array to local storage
+    localStorage.setItem("searchHistoryData", JSON.stringify(searchHistory));
+
+    // Saves city data to local storage
+    localStorage.setItem("cityData", JSON.stringify(cityData));
+
+    // Displays the search history based on what city has been entered
+    loadHistoryData();
+};
+
+
 
