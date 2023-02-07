@@ -28,3 +28,23 @@ let getWeather = function(city) {
             }
         })  
 };
+
+// Function for the any submittion within the html form
+let formSubmit = function(event) {
+    // Prevents event from refreshing
+    event.preventDefault();
+
+    // Input section for form
+    // city id for any city value entered
+    let citySearch = $("#city").val().trim();
+
+    // if statement for city search and if city entered is within getWeather's API call data then display weather
+    if(citySearch) {
+
+        // gets city data from getWeather
+        getWeather(citySearch);
+
+        // Clears search input
+        $("#city").val("");
+    } 
+};
