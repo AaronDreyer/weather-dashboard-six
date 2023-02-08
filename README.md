@@ -16,7 +16,7 @@ This is a web application showing how to use server-side APIs and bootstrap to d
 
 ## Link
 
-[Link to deployed website]()
+[Link to deployed website](https://aarondreyer.github.io/weather-dashboard-six/)
 
 [Link to Repository](https://github.com/AaronDreyer/weather-dashboard-six)
 
@@ -31,8 +31,10 @@ Links above bring user to deployed page and github repository
 
 This application is used to view weather according to city and see the future predictions for that city for up to five days. This shows the dates for each, temperature, wind speed, humitity, and weather icon describing weather. This also shows the usage of server-side APIs, bootstrap, some jQuery, and dayjs to make a successful weather application.
 
+Normal Application
 ![alt text](Assets/Images/Full_Size_Screenshot.png)
 
+Responsive Application (IPhone for reference)
 ![alt text](Assets/Images/Responsive_Screenshot.png)
 
 ## Credits
