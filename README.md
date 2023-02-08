@@ -31,7 +31,7 @@ Links above bring user to deployed page and github repository
 
 This application is used to view weather according to city and see the future predictions for that city for up to five days. This shows the dates for each, temperature, wind speed, humitity, and weather icon describing weather. This also shows the usage of server-side APIs, bootstrap, some jQuery, and dayjs to make a successful weather application.
 
-![alt text](Assets/Images/_Users_aaronottaway_Desktop_Module-6-Challenge_weather-dashboard-six_index.html_.png)
+![alt text](Assets/Images/Full_Size_Screenshot.png)
 
 ![alt text](Assets/Images/Responsive_Screenshot.png)
 
