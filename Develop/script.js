@@ -87,11 +87,11 @@ let displayWeather = function(weatherData) {
                     // This allows the the forecast to appear rather than be on the page automatically
                     let fiveDayCard =
                     // Displays date using dayjs, weather icon like on current weather day, temperature, wind speed, and humidity
-                        `<div>
+                        `<div class="col-md-2 mb-2 bg-info">
                             <h5>` + dayjs(data.list[i].dt * 1000).format("M/D/YYYY") + `</h5>
-                            <img src="https://openweathermap.org/img/wn/` + data.list[i].weather[0].icon + `.png" alt="Weather Icon">
+                            <img src="https://openweathermap.org/img/wn/` + data.list[i].weather[0].icon + `.png" alt="Weather Icon" class="m-1">
                             <p>Temp: ` + data.list[i].main.temp + " °F" + `</p>
-                            <p>Humidity: ` + data.list[i].main.humidity + `</p>
+                            <p>Humidity: ` + data.list[i].main.humidity + "%" + `</p>
                             <p>Wind: ` + data.list[i].wind.speed + " mph" + `</p>
                         </div>`;
 
@@ -115,7 +115,7 @@ let saveHistoryData = function (city) {
     // if the city is already present then no need to add again
     if(!searchHistory.includes(city)){
         searchHistory.push(city);
-        $("#search-history").append("<a href='#' id='" + city + "'>" + city + "</a>")
+        $("#search-history").append("<a href='#' class='list-group-item list-group-item-action' id='" + city + "'>" + city + "</a>")
     } 
 
     // Saves searchHistory array to local storage
@@ -154,7 +154,7 @@ let loadHistoryData = function() {
 
         // Converts the display city name in search history to link to pull data from storage if clicked
         // Append to unordered list
-        $("#search-history").append("<a href='#' id='" + searchHistory[i] + "'>" + searchHistory[i] + "</a>");
+        $("#search-history").append("<a href='#' class='list-group-item list-group-item-action' id='" + searchHistory[i] + "'>" + searchHistory[i] + "</a>");
     }
   };
 

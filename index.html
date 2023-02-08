@@ -20,23 +20,21 @@
         </div>
     </header>
 
-<main>
-    <div>
-        <div>
-            <div>
-            <h5>Search for a City</h5>
-                <form class="form-inline" id="search-form">
-                    <input type="search" class="form-control" id="city" placeholder="Please Enter City">
-                    <button type="submit" class="btn btn-primary mb-3">Enter</button>
-                </form>
+<main class="m-4 p-4">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="text-center">Search for a City</h2>
+                    <form id="search-form">
+                        <input type="search" class="form-control" id="city" placeholder="Please Enter City">
+                        <button type="submit" class="w-100 btn btn-info mt-2 mb-4">Enter</button>
+                    </form>
 
                 <ul id="search-history"></ul>
             </div>
-        </div>
 
-            <div>
-                <section>
-                    <div>
+            <div class="col-md-9">
+                <section class="pl-3 border border-dark">
                         <div>
                             <h2 id="city-name"></h2>
                         </div>
@@ -44,16 +42,15 @@
                             <h3 id="city-humid">Humditity: </h3>
                             <h3 id="city-wind">Wind Speed: </h3>
                 </section>
-            </div>
-            <div>
                 <section>
-                        <h2>5-Day Forecast</h2>
-                    <div id="five-day">
-
+                        <h2 class="text-center mb-5 mt-5">5-Day Forecast</h2>
+                    <div class="row justify-content-between" id="five-day">
+                        
                     </div>
                 </section>
             </div>
         </div>
+    </div>
 </main>
 
 </body>
