@@ -128,5 +128,53 @@ let saveHistoryData = function (city) {
     loadHistoryData();
 };
 
+// Function to load city data saved to local storage
+let loadHistoryData = function() {
+
+    // Retrieves search history data from local storage
+    searchHistory = JSON.parse(localStorage.getItem("searchHistoryData"));
+    // Retrieves the city name data from local storage
+    cityData = JSON.parse(localStorage.getItem("cityData"));
+  
+    // If not data is present then this creates an empt array
+    if (!searchHistory) {
+        searchHistory = []
+    }
+
+    if (!cityData) {
+        cityData = ""
+    }
+
+    // Clears any previous data from the search history unordered list
+    $("#search-history").empty();
+
+    // For loop that runs through the cities avilable in the city data of openweather api
+    for(i = 0 ; i < searchHistory.length ;i++) {
+
+
+        // Converts the display city name in search history to link to pull data from storage if clicked
+        // Append to unordered list
+        $("#search-history").append("<a href='#' id='" + searchHistory[i] + "'>" + searchHistory[i] + "</a>");
+    }
+  };
+
+// Displays the search history based on what city has been entered
+loadHistoryData();
+
+// Starts webpage off with most recent search from local storage
+if (cityData != ""){
+    getWeather(cityData);
+}
+
+// Event handlers for form submittion and click functions
+$("#search-form").submit(formSubmit);
+$("#search-history").on("click", function(event){
+
+    // Retrieves links value from id
+    let pastCity = $(event.target).closest("a").attr("id");
+
+    // Pushes id's link value to getWeather function
+    getWeather(pastCity);
+});
 
 
